@@ -1,0 +1,23 @@
+{
+  "name": "unactual",
+  "version": "1.0.0",
+  "description": "An ai that stops you from breaking the code.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "unactual": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "inquirer": "^12.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
