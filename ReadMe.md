@@ -16,14 +16,28 @@ Developers, and junior developers in particular, often forget the actual archite
 
 ## Installation
 
-From the project folder:
+Install globally from GitHub:
+
+```bash
+npm install -g github:Slyder7634/UnActual
+```
+
+Verify the installation:
+
+```bash
+unactual help
+```
+
+### Development setup
+
+From the cloned project folder:
 
 ```bash
 npm install
 npm link
 ```
 
-`npm link` registers the `unactual` command on your system. After editing the source, you do not need to link again.
+`npm link` registers the `unactual` command from your local source. After editing the source, you do not need to link again.
 
 ## Usage
 
@@ -45,7 +59,11 @@ Paste the clipboard contents into your AI assistant.
 
 ## Configuration
 
-Configuration is stored in `.unactual.json` in the directory where you run the command. Run it from the repository root and commit the file so the team shares the same list.
+Configuration is stored in `.unactual.json` in the directory where you run the command.
+
+Run all commands from the repository root. Paths are relative to that directory. The tool checks that each path exists before saving it, and returns an error if it does not. It also rejects folders.
+
+Commit `.unactual.json` so the team shares the same list.
 
 ```json
 {
@@ -56,4 +74,37 @@ Configuration is stored in `.unactual.json` in the directory where you run the c
 }
 ```
 
-Paths are relative to the repository root. The tool checks that each path exists before saving it, and returns an error if it does not. It also rejects folders.
+## Update
+
+Run the install command again:
+
+```bash
+npm install -g github:Slyder7634/UnActual
+```
+
+## Uninstall
+
+```bash
+npm uninstall -g unactual
+```
+
+## Limitations
+
+Version 1 has these limits:
+
+- Attaches files only. Plain text entries are not supported.
+- No size limit. Large files produce large prompts, which some AI assistants may reject.
+- Commands must be run from the repository root.
+- Linux requires a clipboard tool (`xclip` or `wl-clipboard`).
+
+## Project Structure
+
+```
+src/
+  index.js            entry point, command routing, help
+  config.js           read and write .unactual.json
+  clipboard.js        copy text to the system clipboard
+  commands/
+    configure.js      add, remove, list configured files
+    build.js          build the prompt and copy it
+```
