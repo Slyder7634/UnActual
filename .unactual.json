@@ -1,5 +1,11 @@
 {
   "files": [
-    "ReadMe.md"
+    "docs/large/security.md",
+    "docs/large/requirements.md",
+    "docs/large/CONTRIBUTING.md",
+    "docs/large/database.md",
+    "docs/large/api-guidelines.md",
+    "docs/large/frontend.md",
+    "docs/large/operations.md"
   ]
 }

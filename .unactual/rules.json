@@ -1,0 +1,2520 @@
+{
+  "rules": [
+    {
+      "text": "Never log passwords, tokens, or API keys.",
+      "source": "docs/large/security.md",
+      "section": "Logging",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "never",
+        "passwords",
+        "tokens",
+        "keys."
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 11,
+      "status": "active",
+      "id": "SEC-001"
+    },
+    {
+      "text": "Always mask personal data in log output.",
+      "source": "docs/large/security.md",
+      "section": "Logging",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "always",
+        "mask",
+        "personal",
+        "data",
+        "output."
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 10,
+      "status": "active",
+      "id": "SEC-002"
+    },
+    {
+      "text": "Never log full credit card numbers or bank account details.",
+      "source": "docs/large/security.md",
+      "section": "Logging",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "never",
+        "full",
+        "credit",
+        "card",
+        "numbers"
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 15,
+      "status": "active",
+      "id": "SEC-003"
+    },
+    {
+      "text": "Never write session identifiers to log files.",
+      "source": "docs/large/security.md",
+      "section": "Logging",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "never",
+        "write",
+        "session",
+        "identifiers",
+        "files."
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 12,
+      "status": "active",
+      "id": "SEC-004"
+    },
+    {
+      "text": "Always include a request ID in error logs for traceability.",
+      "source": "docs/large/security.md",
+      "section": "Logging",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "always",
+        "include",
+        "request",
+        "error",
+        "logs"
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 15,
+      "status": "active",
+      "id": "SEC-005"
+    },
+    {
+      "text": "Never log request bodies for authentication endpoints.",
+      "source": "docs/large/security.md",
+      "section": "Logging",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "never",
+        "request",
+        "bodies",
+        "authentication",
+        "endpoints."
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 14,
+      "status": "active",
+      "id": "SEC-006"
+    },
+    {
+      "text": "Passwords must be hashed with bcrypt or argon2 before storage.",
+      "source": "docs/large/security.md",
+      "section": "Authentication",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "passwords",
+        "must",
+        "hashed",
+        "bcrypt",
+        "argon2"
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 16,
+      "status": "active",
+      "id": "SEC-007"
+    },
+    {
+      "text": "Never return password hashes in API responses.",
+      "source": "docs/large/security.md",
+      "section": "Authentication",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "never",
+        "return",
+        "password",
+        "hashes",
+        "responses."
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 12,
+      "status": "active",
+      "id": "SEC-008"
+    },
+    {
+      "text": "Session tokens must expire after 30 minutes of inactivity.",
+      "source": "docs/large/security.md",
+      "section": "Authentication",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "session",
+        "tokens",
+        "must",
+        "expire",
+        "after"
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 15,
+      "status": "active",
+      "id": "SEC-009"
+    },
+    {
+      "text": "Login attempts must be rate limited per account and per IP address.",
+      "source": "docs/large/security.md",
+      "section": "Authentication",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "login",
+        "attempts",
+        "must",
+        "rate",
+        "limited"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 17,
+      "status": "active",
+      "id": "REQ-010"
+    },
+    {
+      "text": "Failed login responses must not reveal whether the username exists.",
+      "source": "docs/large/security.md",
+      "section": "Authentication",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "failed",
+        "login",
+        "responses",
+        "must",
+        "reveal"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 17,
+      "status": "active",
+      "id": "REQ-011"
+    },
+    {
+      "text": "Password reset tokens must be single use and expire within 15 minutes.",
+      "source": "docs/large/security.md",
+      "section": "Authentication",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "password",
+        "reset",
+        "tokens",
+        "must",
+        "single"
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 18,
+      "status": "active",
+      "id": "SEC-012"
+    },
+    {
+      "text": "Multi-factor authentication codes must not be reused.",
+      "source": "docs/large/security.md",
+      "section": "Authentication",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "multi-factor",
+        "authentication",
+        "codes",
+        "must",
+        "reused."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 14,
+      "status": "active",
+      "id": "REQ-013"
+    },
+    {
+      "text": "Never store authentication tokens in local storage in browser code.",
+      "source": "docs/large/security.md",
+      "section": "Authentication",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "never",
+        "store",
+        "authentication",
+        "tokens",
+        "local"
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 17,
+      "status": "active",
+      "id": "SEC-014"
+    },
+    {
+      "text": "All user input must be validated before use.",
+      "source": "docs/large/security.md",
+      "section": "Input handling",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "user",
+        "input",
+        "must",
+        "validated",
+        "before"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 11,
+      "status": "active",
+      "id": "REQ-015"
+    },
+    {
+      "text": "Never build SQL queries with string concatenation.",
+      "source": "docs/large/security.md",
+      "section": "Input handling",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "never",
+        "build",
+        "queries",
+        "string",
+        "concatenation."
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 13,
+      "status": "active",
+      "id": "SEC-016"
+    },
+    {
+      "text": "Uploaded files must be checked for type and size before processing.",
+      "source": "docs/large/security.md",
+      "section": "Input handling",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "uploaded",
+        "files",
+        "must",
+        "checked",
+        "type"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 17,
+      "status": "active",
+      "id": "REQ-017"
+    },
+    {
+      "text": "Never pass user input to shell commands without escaping.",
+      "source": "docs/large/security.md",
+      "section": "Input handling",
+      "category": "guideline",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "never",
+        "pass",
+        "user",
+        "input",
+        "shell"
+      ],
+      "always": false,
+      "priority": 0.5,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 15,
+      "status": "active",
+      "id": "GUI-018"
+    },
+    {
+      "text": "Never render user-supplied HTML without sanitizing it first.",
+      "source": "docs/large/security.md",
+      "section": "Input handling",
+      "category": "guideline",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "never",
+        "render",
+        "user-supplied",
+        "html",
+        "without"
+      ],
+      "always": false,
+      "priority": 0.5,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 15,
+      "status": "active",
+      "id": "GUI-019"
+    },
+    {
+      "text": "Redirect targets must be validated against an allow list.",
+      "source": "docs/large/security.md",
+      "section": "Input handling",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "redirect",
+        "targets",
+        "must",
+        "validated",
+        "against"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 15,
+      "status": "active",
+      "id": "REQ-020"
+    },
+    {
+      "text": "Never commit secrets, keys, or passwords to the repository.",
+      "source": "docs/large/security.md",
+      "section": "Secrets and configuration",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "never",
+        "commit",
+        "secrets",
+        "keys",
+        "passwords"
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 15,
+      "status": "active",
+      "id": "SEC-021"
+    },
+    {
+      "text": "Secrets must be loaded from environment variables or a secret manager.",
+      "source": "docs/large/security.md",
+      "section": "Secrets and configuration",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "secrets",
+        "must",
+        "loaded",
+        "environment",
+        "variables"
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 18,
+      "status": "active",
+      "id": "SEC-022"
+    },
+    {
+      "text": "Never print environment variables that contain secrets.",
+      "source": "docs/large/security.md",
+      "section": "Secrets and configuration",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "never",
+        "print",
+        "environment",
+        "variables",
+        "contain"
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 14,
+      "status": "active",
+      "id": "SEC-023"
+    },
+    {
+      "text": "Development configuration must never point at production databases.",
+      "source": "docs/large/security.md",
+      "section": "Secrets and configuration",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "development",
+        "configuration",
+        "must",
+        "never",
+        "point"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 17,
+      "status": "active",
+      "id": "REQ-024"
+    },
+    {
+      "text": "All external traffic must use TLS 1.2 or later.",
+      "source": "docs/large/security.md",
+      "section": "Transport and data protection",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "external",
+        "traffic",
+        "must",
+        "later."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 12,
+      "status": "active",
+      "id": "REQ-025"
+    },
+    {
+      "text": "Personal data must be encrypted at rest.",
+      "source": "docs/large/security.md",
+      "section": "Transport and data protection",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "personal",
+        "data",
+        "must",
+        "encrypted",
+        "rest."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 10,
+      "status": "active",
+      "id": "REQ-026"
+    },
+    {
+      "text": "Database backups must be encrypted and access controlled.",
+      "source": "docs/large/security.md",
+      "section": "Transport and data protection",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "database",
+        "backups",
+        "must",
+        "encrypted",
+        "access"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 15,
+      "status": "active",
+      "id": "REQ-027"
+    },
+    {
+      "text": "Never disable certificate verification in production code.",
+      "source": "docs/large/security.md",
+      "section": "Transport and data protection",
+      "category": "guideline",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "never",
+        "disable",
+        "certificate",
+        "verification",
+        "production"
+      ],
+      "always": false,
+      "priority": 0.5,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 15,
+      "status": "active",
+      "id": "GUI-028"
+    },
+    {
+      "text": "Database access must go through the repository layer.",
+      "source": "docs/large/requirements.md",
+      "section": "Architecture",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "database",
+        "access",
+        "must",
+        "through",
+        "repository"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 14,
+      "status": "active",
+      "id": "REQ-029"
+    },
+    {
+      "text": "Handlers must never query the database directly.",
+      "source": "docs/large/requirements.md",
+      "section": "Architecture",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "handlers",
+        "must",
+        "never",
+        "query",
+        "database"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 12,
+      "status": "active",
+      "id": "REQ-030"
+    },
+    {
+      "text": "Business logic must not live in API handlers.",
+      "source": "docs/large/requirements.md",
+      "section": "Architecture",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "business",
+        "logic",
+        "must",
+        "live",
+        "handlers."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 12,
+      "status": "active",
+      "id": "REQ-031"
+    },
+    {
+      "text": "Services must not import from API handler modules.",
+      "source": "docs/large/requirements.md",
+      "section": "Architecture",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "services",
+        "must",
+        "import",
+        "handler",
+        "modules."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 13,
+      "status": "active",
+      "id": "REQ-032"
+    },
+    {
+      "text": "Shared utilities must not depend on feature modules.",
+      "source": "docs/large/requirements.md",
+      "section": "Architecture",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "shared",
+        "utilities",
+        "must",
+        "depend",
+        "feature"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 13,
+      "status": "active",
+      "id": "REQ-033"
+    },
+    {
+      "text": "External API calls must go through a client module, never directly from business logic.",
+      "source": "docs/large/requirements.md",
+      "section": "Architecture",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "external",
+        "calls",
+        "must",
+        "through",
+        "client"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 22,
+      "status": "active",
+      "id": "REQ-034"
+    },
+    {
+      "text": "Background jobs must be idempotent.",
+      "source": "docs/large/requirements.md",
+      "section": "Architecture",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "background",
+        "jobs",
+        "must",
+        "idempotent."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 9,
+      "status": "active",
+      "id": "REQ-035"
+    },
+    {
+      "text": "Cross-module communication must use defined service interfaces, not direct access to internal files.",
+      "source": "docs/large/requirements.md",
+      "section": "Architecture",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "cross-module",
+        "communication",
+        "must",
+        "defined",
+        "service"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 25,
+      "status": "active",
+      "id": "REQ-036"
+    },
+    {
+      "text": "Every endpoint must return a consistent error format with a code and a message.",
+      "source": "docs/large/requirements.md",
+      "section": "API design",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "every",
+        "endpoint",
+        "must",
+        "return",
+        "consistent"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 20,
+      "status": "active",
+      "id": "REQ-037"
+    },
+    {
+      "text": "List endpoints must support pagination.",
+      "source": "docs/large/requirements.md",
+      "section": "API design",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "list",
+        "endpoints",
+        "must",
+        "support",
+        "pagination."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 10,
+      "status": "active",
+      "id": "REQ-038"
+    },
+    {
+      "text": "Breaking changes to public endpoints must be versioned.",
+      "source": "docs/large/requirements.md",
+      "section": "API design",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "breaking",
+        "changes",
+        "public",
+        "endpoints",
+        "must"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 14,
+      "status": "active",
+      "id": "REQ-039"
+    },
+    {
+      "text": "Endpoints that change data must validate the request body against a schema.",
+      "source": "docs/large/requirements.md",
+      "section": "API design",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "endpoints",
+        "change",
+        "data",
+        "must",
+        "validate"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 19,
+      "status": "active",
+      "id": "REQ-040"
+    },
+    {
+      "text": "Response times for read endpoints must stay under 300 milliseconds at the 95th percentile.",
+      "source": "docs/large/requirements.md",
+      "section": "API design",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "response",
+        "times",
+        "read",
+        "endpoints",
+        "must"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 23,
+      "status": "active",
+      "id": "REQ-041"
+    },
+    {
+      "text": "Endpoints must return 401 for missing credentials and 403 for insufficient permissions.",
+      "source": "docs/large/requirements.md",
+      "section": "API design",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "endpoints",
+        "must",
+        "return",
+        "missing",
+        "credentials"
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 22,
+      "status": "active",
+      "id": "SEC-042"
+    },
+    {
+      "text": "Schema changes must be delivered as migration files.",
+      "source": "docs/large/requirements.md",
+      "section": "Data",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "schema",
+        "changes",
+        "must",
+        "delivered",
+        "migration"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 13,
+      "status": "active",
+      "id": "REQ-043"
+    },
+    {
+      "text": "Migrations must be reversible.",
+      "source": "docs/large/requirements.md",
+      "section": "Data",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "migrations",
+        "must",
+        "reversible."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 8,
+      "status": "active",
+      "id": "REQ-044"
+    },
+    {
+      "text": "Deleting user records must remove or anonymize related personal data.",
+      "source": "docs/large/requirements.md",
+      "section": "Data",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "deleting",
+        "user",
+        "records",
+        "must",
+        "remove"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 18,
+      "status": "active",
+      "id": "REQ-045"
+    },
+    {
+      "text": "Timestamps must be stored in UTC.",
+      "source": "docs/large/requirements.md",
+      "section": "Data",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "timestamps",
+        "must",
+        "stored",
+        "utc."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 9,
+      "status": "active",
+      "id": "REQ-046"
+    },
+    {
+      "text": "Money values must be stored as integers in the smallest currency unit.",
+      "source": "docs/large/requirements.md",
+      "section": "Data",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "money",
+        "values",
+        "must",
+        "stored",
+        "integers"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 18,
+      "status": "active",
+      "id": "REQ-047"
+    },
+    {
+      "text": "New features must include tests for the main path and one failure case.",
+      "source": "docs/large/requirements.md",
+      "section": "Testing",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "features",
+        "must",
+        "include",
+        "tests",
+        "main"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 18,
+      "status": "active",
+      "id": "REQ-048"
+    },
+    {
+      "text": "Bug fixes must start with a failing test that reproduces the bug.",
+      "source": "docs/large/requirements.md",
+      "section": "Testing",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "fixes",
+        "must",
+        "start",
+        "failing",
+        "test"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 17,
+      "status": "active",
+      "id": "REQ-049"
+    },
+    {
+      "text": "Existing tests must pass before a change is merged.",
+      "source": "docs/large/requirements.md",
+      "section": "Testing",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "existing",
+        "tests",
+        "must",
+        "pass",
+        "before"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 13,
+      "status": "active",
+      "id": "REQ-050"
+    },
+    {
+      "text": "Repository layer code must have integration tests against a real database.",
+      "source": "docs/large/requirements.md",
+      "section": "Testing",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "repository",
+        "layer",
+        "code",
+        "must",
+        "have"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 19,
+      "status": "active",
+      "id": "REQ-051"
+    },
+    {
+      "text": "Public API endpoints must have contract tests.",
+      "source": "docs/large/requirements.md",
+      "section": "Testing",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "public",
+        "endpoints",
+        "must",
+        "have",
+        "contract"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 12,
+      "status": "active",
+      "id": "REQ-052"
+    },
+    {
+      "text": "Test data must not contain real personal information.",
+      "source": "docs/large/requirements.md",
+      "section": "Testing",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "test",
+        "data",
+        "must",
+        "contain",
+        "real"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 14,
+      "status": "active",
+      "id": "REQ-053"
+    },
+    {
+      "text": "Forms must show validation errors next to the field that caused them.",
+      "source": "docs/large/requirements.md",
+      "section": "Frontend",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "forms",
+        "must",
+        "show",
+        "validation",
+        "errors"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 18,
+      "status": "active",
+      "id": "REQ-054"
+    },
+    {
+      "text": "Pages must remain usable at 320 pixels width.",
+      "source": "docs/large/requirements.md",
+      "section": "Frontend",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "pages",
+        "must",
+        "remain",
+        "usable",
+        "pixels"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 12,
+      "status": "active",
+      "id": "REQ-055"
+    },
+    {
+      "text": "User-facing text must be stored in translation files, never hardcoded in components.",
+      "source": "docs/large/requirements.md",
+      "section": "Frontend",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "user-facing",
+        "text",
+        "must",
+        "stored",
+        "translation"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 21,
+      "status": "active",
+      "id": "REQ-056"
+    },
+    {
+      "text": "Components must not fetch data directly.",
+      "source": "docs/large/requirements.md",
+      "section": "Frontend",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "components",
+        "must",
+        "fetch",
+        "data",
+        "directly."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 10,
+      "status": "active",
+      "id": "REQ-057"
+    },
+    {
+      "text": "Data loading must go through hooks or services.",
+      "source": "docs/large/requirements.md",
+      "section": "Frontend",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "data",
+        "loading",
+        "must",
+        "through",
+        "hooks"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 12,
+      "status": "active",
+      "id": "REQ-058"
+    },
+    {
+      "text": "Pull requests must link to the related ticket.",
+      "source": "docs/large/CONTRIBUTING.md",
+      "section": "Pull requests",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "pull",
+        "requests",
+        "must",
+        "link",
+        "related"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 12,
+      "status": "active",
+      "id": "REQ-059"
+    },
+    {
+      "text": "Reviewers must check the change against the security rules before approval.",
+      "source": "docs/large/CONTRIBUTING.md",
+      "section": "Pull requests",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "reviewers",
+        "must",
+        "check",
+        "change",
+        "against"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 19,
+      "status": "active",
+      "id": "REQ-060"
+    },
+    {
+      "text": "Pull requests that change the database schema must include the migration file.",
+      "source": "docs/large/CONTRIBUTING.md",
+      "section": "Pull requests",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "pull",
+        "requests",
+        "change",
+        "database",
+        "schema"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 20,
+      "status": "active",
+      "id": "REQ-061"
+    },
+    {
+      "text": "Each pull request must pass the linter before review.",
+      "source": "docs/large/CONTRIBUTING.md",
+      "section": "Pull requests",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "each",
+        "pull",
+        "request",
+        "must",
+        "pass"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 14,
+      "status": "active",
+      "id": "REQ-062"
+    },
+    {
+      "text": "Functions should not exceed 50 lines.",
+      "source": "docs/large/CONTRIBUTING.md",
+      "section": "Code style",
+      "category": "guideline",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "functions",
+        "should",
+        "exceed",
+        "lines."
+      ],
+      "always": false,
+      "priority": 0.5,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 10,
+      "status": "active",
+      "id": "GUI-063"
+    },
+    {
+      "text": "Files should not exceed 400 lines.",
+      "source": "docs/large/CONTRIBUTING.md",
+      "section": "Code style",
+      "category": "guideline",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "files",
+        "should",
+        "exceed",
+        "lines."
+      ],
+      "always": false,
+      "priority": 0.5,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 9,
+      "status": "active",
+      "id": "GUI-064"
+    },
+    {
+      "text": "Commits should not mix formatting changes with logic changes.",
+      "source": "docs/large/CONTRIBUTING.md",
+      "section": "Commits",
+      "category": "guideline",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "commits",
+        "should",
+        "formatting",
+        "changes",
+        "logic"
+      ],
+      "always": false,
+      "priority": 0.5,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 16,
+      "status": "active",
+      "id": "GUI-065"
+    },
+    {
+      "text": "Never force push to the main branch.",
+      "source": "docs/large/CONTRIBUTING.md",
+      "section": "Commits",
+      "category": "guideline",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "never",
+        "force",
+        "push",
+        "main",
+        "branch."
+      ],
+      "always": false,
+      "priority": 0.5,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 9,
+      "status": "active",
+      "id": "GUI-066"
+    },
+    {
+      "text": "Dependencies with known critical vulnerabilities must not be added.",
+      "source": "docs/large/CONTRIBUTING.md",
+      "section": "Dependencies",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "dependencies",
+        "known",
+        "critical",
+        "vulnerabilities",
+        "must"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 17,
+      "status": "active",
+      "id": "REQ-067"
+    },
+    {
+      "text": "Developers should avoid adding a dependency for a function that the standard library provides.",
+      "source": "docs/large/CONTRIBUTING.md",
+      "section": "Dependencies",
+      "category": "guideline",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "developers",
+        "should",
+        "avoid",
+        "adding",
+        "dependency"
+      ],
+      "always": false,
+      "priority": 0.5,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 24,
+      "status": "active",
+      "id": "GUI-068"
+    },
+    {
+      "text": "Queries must use parameters, never string interpolation.",
+      "source": "docs/large/database.md",
+      "section": "Queries",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "queries",
+        "must",
+        "parameters",
+        "never",
+        "string"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 14,
+      "status": "active",
+      "id": "REQ-069"
+    },
+    {
+      "text": "Queries that return many rows must be paginated or streamed.",
+      "source": "docs/large/database.md",
+      "section": "Queries",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "queries",
+        "return",
+        "many",
+        "rows",
+        "must"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 15,
+      "status": "active",
+      "id": "REQ-070"
+    },
+    {
+      "text": "Long-running queries must have a timeout set.",
+      "source": "docs/large/database.md",
+      "section": "Queries",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "long-running",
+        "queries",
+        "must",
+        "have",
+        "timeout"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 12,
+      "status": "active",
+      "id": "REQ-071"
+    },
+    {
+      "text": "Every table must have a primary key.",
+      "source": "docs/large/database.md",
+      "section": "Schema",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "every",
+        "table",
+        "must",
+        "have",
+        "primary"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 9,
+      "status": "active",
+      "id": "REQ-072"
+    },
+    {
+      "text": "Foreign keys must be defined in the database, not only in application code.",
+      "source": "docs/large/database.md",
+      "section": "Schema",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "foreign",
+        "keys",
+        "must",
+        "defined",
+        "database"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 19,
+      "status": "active",
+      "id": "REQ-073"
+    },
+    {
+      "text": "Soft-deleted rows must be excluded from default queries.",
+      "source": "docs/large/database.md",
+      "section": "Schema",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "soft-deleted",
+        "rows",
+        "must",
+        "excluded",
+        "default"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 14,
+      "status": "active",
+      "id": "REQ-074"
+    },
+    {
+      "text": "Database connections must be released after use.",
+      "source": "docs/large/database.md",
+      "section": "Connections",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "database",
+        "connections",
+        "must",
+        "released",
+        "after"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 12,
+      "status": "active",
+      "id": "REQ-075"
+    },
+    {
+      "text": "Connection pool size must be configured per service, not hardcoded.",
+      "source": "docs/large/database.md",
+      "section": "Connections",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "connection",
+        "pool",
+        "size",
+        "must",
+        "configured"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 17,
+      "status": "active",
+      "id": "REQ-076"
+    },
+    {
+      "text": "Database credentials must not appear in source code.",
+      "source": "docs/large/database.md",
+      "section": "Connections",
+      "category": "security",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "database",
+        "credentials",
+        "must",
+        "appear",
+        "source"
+      ],
+      "always": true,
+      "priority": 1,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 13,
+      "status": "active",
+      "id": "SEC-077"
+    },
+    {
+      "text": "Migrations must be reviewed by a second developer before running in production.",
+      "source": "docs/large/database.md",
+      "section": "Migrations",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "migrations",
+        "must",
+        "reviewed",
+        "second",
+        "developer"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 20,
+      "status": "active",
+      "id": "REQ-078"
+    },
+    {
+      "text": "Destructive migrations must be preceded by a backup.",
+      "source": "docs/large/database.md",
+      "section": "Migrations",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "destructive",
+        "migrations",
+        "must",
+        "preceded",
+        "backup."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 13,
+      "status": "active",
+      "id": "REQ-079"
+    },
+    {
+      "text": "Migrations should not depend on application code.",
+      "source": "docs/large/database.md",
+      "section": "Migrations",
+      "category": "guideline",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "migrations",
+        "should",
+        "depend",
+        "application",
+        "code."
+      ],
+      "always": false,
+      "priority": 0.5,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 13,
+      "status": "active",
+      "id": "GUI-080"
+    },
+    {
+      "text": "Resource identifiers in paths should not expose internal database sequence numbers.",
+      "source": "docs/large/api-guidelines.md",
+      "section": "Naming",
+      "category": "guideline",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "resource",
+        "identifiers",
+        "paths",
+        "should",
+        "expose"
+      ],
+      "always": false,
+      "priority": 0.5,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 21,
+      "status": "active",
+      "id": "GUI-081"
+    },
+    {
+      "text": "Errors should not include stack traces in production responses.",
+      "source": "docs/large/api-guidelines.md",
+      "section": "Responses",
+      "category": "guideline",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "errors",
+        "should",
+        "include",
+        "stack",
+        "traces"
+      ],
+      "always": false,
+      "priority": 0.5,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 16,
+      "status": "active",
+      "id": "GUI-082"
+    },
+    {
+      "text": "Responses should not include fields the client did not request when a field selection is supported.",
+      "source": "docs/large/api-guidelines.md",
+      "section": "Responses",
+      "category": "guideline",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "responses",
+        "should",
+        "include",
+        "fields",
+        "client"
+      ],
+      "always": false,
+      "priority": 0.5,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 25,
+      "status": "active",
+      "id": "GUI-083"
+    },
+    {
+      "text": "The API version must appear in the URL path, such as /v1/users.",
+      "source": "docs/large/api-guidelines.md",
+      "section": "Versioning",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "version",
+        "must",
+        "appear",
+        "path",
+        "such"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 16,
+      "status": "active",
+      "id": "REQ-084"
+    },
+    {
+      "text": "Clients exceeding the rate limit must receive status 429 with a retry-after header.",
+      "source": "docs/large/api-guidelines.md",
+      "section": "Rate limiting",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "clients",
+        "exceeding",
+        "rate",
+        "limit",
+        "must"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 21,
+      "status": "active",
+      "id": "REQ-085"
+    },
+    {
+      "text": "Shared components must live in the common components folder.",
+      "source": "docs/large/frontend.md",
+      "section": "Components",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "shared",
+        "components",
+        "must",
+        "live",
+        "common"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 15,
+      "status": "active",
+      "id": "REQ-086"
+    },
+    {
+      "text": "Components must not contain business rules.",
+      "source": "docs/large/frontend.md",
+      "section": "Components",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "components",
+        "must",
+        "contain",
+        "business",
+        "rules."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 11,
+      "status": "active",
+      "id": "REQ-087"
+    },
+    {
+      "text": "Server data must be cached and invalidated after mutations.",
+      "source": "docs/large/frontend.md",
+      "section": "State",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "server",
+        "data",
+        "must",
+        "cached",
+        "invalidated"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 15,
+      "status": "active",
+      "id": "REQ-088"
+    },
+    {
+      "text": "Interactive elements must be reachable by keyboard.",
+      "source": "docs/large/frontend.md",
+      "section": "Accessibility",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "interactive",
+        "elements",
+        "must",
+        "reachable",
+        "keyboard."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 13,
+      "status": "active",
+      "id": "REQ-089"
+    },
+    {
+      "text": "Images must have alternative text.",
+      "source": "docs/large/frontend.md",
+      "section": "Accessibility",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "images",
+        "must",
+        "have",
+        "alternative",
+        "text."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 9,
+      "status": "active",
+      "id": "REQ-090"
+    },
+    {
+      "text": "Color must not be the only way to convey information.",
+      "source": "docs/large/frontend.md",
+      "section": "Accessibility",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "color",
+        "must",
+        "only",
+        "convey",
+        "information."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 14,
+      "status": "active",
+      "id": "REQ-091"
+    },
+    {
+      "text": "Modal dialogs must trap focus while open.",
+      "source": "docs/large/frontend.md",
+      "section": "Accessibility",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "modal",
+        "dialogs",
+        "must",
+        "trap",
+        "focus"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 11,
+      "status": "active",
+      "id": "REQ-092"
+    },
+    {
+      "text": "Deployments must be performed through the CI pipeline, never by hand.",
+      "source": "docs/large/operations.md",
+      "section": "Deployment",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "deployments",
+        "must",
+        "performed",
+        "through",
+        "pipeline"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 18,
+      "status": "active",
+      "id": "REQ-093"
+    },
+    {
+      "text": "Every deployment must have a rollback plan documented in the release notes.",
+      "source": "docs/large/operations.md",
+      "section": "Deployment",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "every",
+        "deployment",
+        "must",
+        "have",
+        "rollback"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 19,
+      "status": "active",
+      "id": "REQ-094"
+    },
+    {
+      "text": "Production deployments must not occur on Fridays after 14:00.",
+      "source": "docs/large/operations.md",
+      "section": "Deployment",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "production",
+        "deployments",
+        "must",
+        "occur",
+        "fridays"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 16,
+      "status": "active",
+      "id": "REQ-095"
+    },
+    {
+      "text": "Every service must expose a health check endpoint.",
+      "source": "docs/large/operations.md",
+      "section": "Monitoring",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "every",
+        "service",
+        "must",
+        "expose",
+        "health"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 13,
+      "status": "active",
+      "id": "REQ-096"
+    },
+    {
+      "text": "Errors must be reported to the central error tracker with the request ID.",
+      "source": "docs/large/operations.md",
+      "section": "Monitoring",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "errors",
+        "must",
+        "reported",
+        "central",
+        "error"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 19,
+      "status": "active",
+      "id": "REQ-097"
+    },
+    {
+      "text": "Alerts must link to a runbook.",
+      "source": "docs/large/operations.md",
+      "section": "Monitoring",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "alerts",
+        "must",
+        "link",
+        "runbook."
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 8,
+      "status": "active",
+      "id": "REQ-098"
+    },
+    {
+      "text": "Incidents must be recorded in the incident tracker within one hour of detection.",
+      "source": "docs/large/operations.md",
+      "section": "Incidents",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "incidents",
+        "must",
+        "recorded",
+        "incident",
+        "tracker"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 20,
+      "status": "active",
+      "id": "REQ-099"
+    },
+    {
+      "text": "Post-incident reviews must be written without assigning personal blame.",
+      "source": "docs/large/operations.md",
+      "section": "Incidents",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "post-incident",
+        "reviews",
+        "must",
+        "written",
+        "without"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 18,
+      "status": "active",
+      "id": "REQ-100"
+    },
+    {
+      "text": "Hotfixes must be merged back into the main branch the same day.",
+      "source": "docs/large/operations.md",
+      "section": "Incidents",
+      "category": "requirement",
+      "scope": [
+        "**"
+      ],
+      "languages": [],
+      "change_types": [],
+      "triggers": [
+        "hotfixes",
+        "must",
+        "merged",
+        "back",
+        "into"
+      ],
+      "always": false,
+      "priority": 0.8,
+      "requires": [],
+      "conflicts_with": [],
+      "tokens": 16,
+      "status": "active",
+      "id": "REQ-101"
+    }
+  ]
+}
